@@ -24,11 +24,11 @@ Route::group([
     'namespace'=>'App\Http\Controllers',
     'prefix'=>'auth',
 ], function ($router){
-    Route::post('login', 'AuthContoller@login');
-    Route::post('register', 'AuthContoller@register');
-    Route::post('logout', 'AuthContoller@logout');
-    Route::get('profile', 'AuthContoller@profile');
-    Route::post('refresh', 'AuthContoller@refresh');
+    Route::post('login', 'AuthController@login');
+    Route::post('register', 'AuthController@register');
+    Route::post('logout', 'AuthController@logout');
+    Route::get('profile', 'AuthController@profile');
+    Route::post('refresh', 'AuthController@refresh');
 });
 
 Route::group([
@@ -36,5 +36,5 @@ Route::group([
     'namespace'=>'App\Http\Controllers',
     'prefix'=>'auth',
 ], function ($router){
-    Route::resource('todos', 'TodoContoller@login');
+    Route::resource('todos', 'TodoController@login');
 });
