@@ -23,7 +23,7 @@ class TodoController extends Controller
      */
     public function index()
     {
-        $todos = $this->user->todos()->get(["title", "body", "completed", "created_by"]);
+        $todos = $this->user->todos()->get(["id", "title", "body", "completed", "created_by"]);
         return response()->json($todos->toArray());
     }
 
@@ -49,8 +49,7 @@ class TodoController extends Controller
         [
             "title"=> "required|string",
             "body"=> "required|string",
-            "completed"=> "required|boolean",
-            "created_by"=> "required|string"
+            "completed"=> "required|boolean"
         ]);
         if($validator->fails()){
             return response()->json([
@@ -63,7 +62,6 @@ class TodoController extends Controller
         $todo->title = $request->title;
         $todo->body = $request->body;
         $todo->completed = $request->completed;
-        $todo->created_by = $request->created_by;
 
         if($this->user->todos()->save($todo)){
             return response()->json([
@@ -115,8 +113,7 @@ class TodoController extends Controller
             [
                 "title"=> "required|string",
                 "body"=> "required|string",
-                "completed"=> "required|boolean",
-                "created_by"=> "required|string"
+                "completed"=> "required|boolean"
             ]);
         if($validator->fails()){
             return response()->json([
@@ -125,11 +122,9 @@ class TodoController extends Controller
             ], 400);
         }
 
-//        $todo = new Todo();
         $todo->title = $request->title;
         $todo->body = $request->body;
         $todo->completed = $request->completed;
-//        $todo->created_by = $request->created_by;
 
         if($this->user->todos()->save($todo)){
             return response()->json([

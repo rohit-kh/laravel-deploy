@@ -34,7 +34,6 @@ Route::group([
 Route::group([
     'middleware'=>'api',
     'namespace'=>'App\Http\Controllers',
-    'prefix'=>'auth',
 ], function ($router){
-    Route::resource('todos', 'TodoController@login');
+    Route::resource('todos', 'TodoController');
 });
