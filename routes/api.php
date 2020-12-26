@@ -37,3 +37,10 @@ Route::group([
 ], function ($router){
     Route::resource('todos', 'TodoController');
 });
+
+Route::group([
+    'middleware'=>'api',
+    'namespace'=>'App\Http\Controllers',
+], function ($router){
+    Route::resource('product', 'ProductsController');
+});
