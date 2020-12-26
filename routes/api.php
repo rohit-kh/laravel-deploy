@@ -44,3 +44,10 @@ Route::group([
 ], function ($router){
     Route::resource('product', 'ProductsController');
 });
+
+Route::group([
+    'middleware'=>'api',
+    'namespace'=>'App\Http\Controllers',
+], function ($router){
+    Route::resource('product/{productId}/comment', 'CommentsController');
+});
