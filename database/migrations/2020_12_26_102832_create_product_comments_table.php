@@ -15,6 +15,7 @@ class CreateProductCommentsTable extends Migration
     {
         Schema::create('product_comments', function (Blueprint $table) {
             $table->id();
+            $table->text("comment");
             $table->unsignedBigInteger("commented_by");
 
             $table->foreign("commented_by")->references("id")
