@@ -2,8 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41aec94c-96d2-4098-9dfc-bc5becd09e7a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/products.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/signup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/products.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/signin.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/signup.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/views/0026d09229a5c0d8865fbb1b3e7aafd0bf8bc085.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/views/4cd42db2eafa51969cb54e3d718899007424a8bb.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/views/7c652f2aa57e2427e4d4f8d5491907bf2a75c58b.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/views/82ba9dd5e7301ea4db6f7a98dda609d0ad7b4070.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/views/eb243d41312979ade6dc6978592ef18b03c3842b.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthAPIController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthAPIController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Welcome.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/signin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/95471a1a4fddb42a0c2b90ca388bfe26f2eee7f3.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,16 +162,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/js" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/css" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
+      <recent name="$PROJECT_DIR$/assets/js" />
       <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
+      <recent name="$PROJECT_DIR$/resources/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/css" />
@@ -194,7 +216,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php</url>
-          <line>16</line>
+          <line>20</line>
           <properties>
             <option name="className" value="\App\Http\Controllers\AuthAPIController" />
             <option name="methodName" value="logout" />

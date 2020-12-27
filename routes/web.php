@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,5 +16,6 @@ use App\Http\Controllers\WelcomeController;
 */
 
 Route::get('/', [WelcomeController::class, 'index']);
-Route::get('login', [WelcomeController::class, 'showLoginForm']);
-//Route::get('/login', 'WelcomeController@showLoginForm');
+Route::get('signin', [WelcomeController::class, 'showSigninForm']);
+Route::get('signup', [WelcomeController::class, 'showSignupForm']);
+Route::get('product', [ProductController::class, 'showProducts']);

@@ -19,7 +19,7 @@ class AuthAPIController extends Controller
             "password"=>"required|string|min:6"
         ]);
         if($validator->fails()){
-            return response()-json($validator->errors(), 400);
+            return response()->json($validator->errors(), 400);
         }
 
         $tokenValidity = 24*60;

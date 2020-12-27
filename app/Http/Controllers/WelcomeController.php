@@ -8,10 +8,14 @@ use Illuminate\Http\Request;
 class WelcomeController extends Controller
 {
     public function index(Request $request){
-        return  redirect("/login");
+        return  redirect("/signin");
     }
 
-    public function showLoginForm(Request $request){
-        return view("home");
+    public function showSigninForm(Request $request){
+        return view("signin");
+    }
+
+    public function showSignupForm(Request $request){
+        return view("signup");
     }
 }
