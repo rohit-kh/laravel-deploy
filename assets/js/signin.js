@@ -14,7 +14,9 @@ var signin = function () {
                 dataType: 'JSON',
                 success: function (data) {
                     setCookie('JWT-TOKEN', data.token, 1);
-                    window.location = 'product';
+                    setTimeout(function (){
+                        window.location = 'product';
+                    },1000);
                 },
                 error: function (event, jqxhr, settings) {
                     swal({

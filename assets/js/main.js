@@ -1,4 +1,4 @@
-function accessCookie(cookieName) {
+function getCookie(cookieName) {
     var name = cookieName + "=";
     var allCookieArray = document.cookie.split(';');
     for (var i = 0; i < allCookieArray.length; i++) {

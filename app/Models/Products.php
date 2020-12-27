@@ -9,7 +9,7 @@ class Products extends Model
 {
     use HasFactory;
 
-    public function productImages()
+    public function images()
     {
         return $this->hasMany(ProductImages::class, "product_id", "id");
     }

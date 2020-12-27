@@ -19,3 +19,4 @@ Route::get('/', [WelcomeController::class, 'index']);
 Route::get('signin', [WelcomeController::class, 'showSigninForm']);
 Route::get('signup', [WelcomeController::class, 'showSignupForm']);
 Route::get('product', [ProductController::class, 'showProducts']);
+Route::get('product/{productId}', [ProductController::class, 'showProductDetails']);

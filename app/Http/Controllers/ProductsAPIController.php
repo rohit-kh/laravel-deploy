@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ProductComments;
 use App\Models\ProductImages;
 use App\Models\Products;
 use Illuminate\Http\Request;
@@ -20,7 +21,7 @@ class ProductsAPIController extends Controller
     {
         $this->middleware("auth:api");
         $this->user = $this->guard()->user();
-        $this->products = Products::with("comments")->get();
+        $this->products = Products::with("images")->get();
     }
 
 
@@ -85,11 +86,11 @@ class ProductsAPIController extends Controller
         $images = $request->file("image");
         $status = true;
         foreach ($images as $image) {
-            $newName = strtotime(Carbon::now()) . rand() . "." . $image->getClientOriginalExtension();
+            $newName = strtotime(Carbon::now()) . rand() . ".". $image->getClientOriginalExtension();
             $image->move(public_path("/product/images"), $newName);
             $productImage = new ProductImages();
             $productImage->name = $newName;
-            $status = $product->productImages()->save($productImage);
+            $status = $product->images()->save($productImage);
         }
         return $status;
     }
@@ -102,7 +103,13 @@ class ProductsAPIController extends Controller
      */
     public function show($id)
     {
-        return Products::with("comments")->findOrFail($id);
+        $products = Products::with("images")->findOrFail($id);
+        $comments =  ProductComments::with("user")
+            ->where("product_id", $id)
+            ->orderBy("created_at","ASC")
+            ->get();
+        $products->comments = $comments;
+        return $products;
     }
 
     /**

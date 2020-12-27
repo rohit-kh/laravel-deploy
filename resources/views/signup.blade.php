@@ -23,12 +23,6 @@ $v = strtotime(Date("Y-m-d H:i:s"));
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto text-right">
-{{--            <li class="nav-item active">--}}
-{{--                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>--}}
-{{--            </li>--}}
-{{--            <li class="nav-item">--}}
-{{--                <a class="nav-link" href="#">Link</a>--}}
-{{--            </li>--}}
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <a class="nav-link" href="signin">Sign in</a>
@@ -56,7 +50,10 @@ $v = strtotime(Date("Y-m-d H:i:s"));
                         <label for="password">Password</label>
                         <input type="password" class="form-control" name="password" required minlength="6" id="password">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Create account</button>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Create account
+                        <span class="spinner-border spinner-border-sm"></span>
+                    </button>
                 </form>
             </div>
         </div>

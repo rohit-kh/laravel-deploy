@@ -54,7 +54,10 @@ $v = strtotime(Date("Y-m-d H:i:s"));
                         <label for="password">Password</label>
                         <input type="password" class="form-control" name="password" required minlength="6" id="password">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Sign in
+                        <span class="spinner-border spinner-border-sm"></span>
+                    </button>
                 </form>
             </div>
         </div>
@@ -84,6 +87,7 @@ $v = strtotime(Date("Y-m-d H:i:s"));
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"
         crossorigin="anonymous"></script>
 <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+<script src="{{ URL::asset('assets/js/main.js?v='.$v) }}"></script>
 <script src="{{ URL::asset('assets/js/signin.js?v='.$v) }}"></script>
 </body>
 <script>

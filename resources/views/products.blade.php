@@ -9,7 +9,7 @@ $v = strtotime(Date("Y-m-d H:i:s"));
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/main.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/main.css?v='.$v) }}">
     <title>Products | OLX</title>
 </head>
 <body>
@@ -23,41 +23,61 @@ $v = strtotime(Date("Y-m-d H:i:s"));
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto text-right">
-{{--            <li class="nav-item active">--}}
-{{--                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>--}}
-{{--            </li>--}}
-{{--            <li class="nav-item">--}}
-{{--                <a class="nav-link" href="#">Link</a>--}}
-{{--            </li>--}}
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="product/create">Add product</a>
+            </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <a class="nav-link" href="signin">Sign in</a>
+            <a class="nav-link" href="#">Logout</a>
         </form>
     </div>
 </nav>
 <div class="container mt-3">
-    <div class="col-md-4 offset-md-4">
-        <div class="card">
-            <div class="card-header">Create your account</div>
-            <div class="card-body">
-                <form class="signup-form" id="signup-form" name="signup-form" method="post">
-                    @csrf
-                    <div class="form-group">
-                        <label for="name">Display name</label>
-                        <input type="text" class="form-control" name="name" id="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" class="form-control" name="email" id="email" required aria-describedby="emailHelp">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                            else.</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" name="password" required minlength="6" id="password">
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Create account</button>
-                </form>
+    {{--        <div class="col-md-12 text-center">--}}
+    {{--            <span class="spinner-border"></span> &nbsp;--}}
+    {{--        </div>--}}
+    <div class="row product-list">
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-bottom" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Jane Doe</h4>
+                    <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-bottom" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Jane Doe</h4>
+                    <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-bottom" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Jane Doe</h4>
+                    <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-bottom" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Jane Doe</h4>
+                    <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
             </div>
         </div>
     </div>
