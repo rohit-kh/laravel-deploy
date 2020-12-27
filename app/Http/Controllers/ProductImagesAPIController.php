@@ -6,7 +6,7 @@ use App\Models\ProductImages;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class ProductImagesController extends Controller
+class ProductImagesAPIController extends Controller
 {
     protected $user;
 

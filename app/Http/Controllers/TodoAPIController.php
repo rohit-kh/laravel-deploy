@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
-class TodoController extends Controller
+class TodoAPIController extends Controller
 {
     protected $user;
 
@@ -85,7 +85,6 @@ class TodoController extends Controller
      */
     public function show(Todo $todo)
     {
-        //
         return $todo;
     }
 

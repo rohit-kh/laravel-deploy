@@ -24,30 +24,30 @@ Route::group([
     'namespace'=>'App\Http\Controllers',
     'prefix'=>'auth',
 ], function ($router){
-    Route::post('login', 'AuthController@login');
-    Route::post('register', 'AuthController@register');
-    Route::post('logout', 'AuthController@logout');
-    Route::get('profile', 'AuthController@profile');
-    Route::post('refresh', 'AuthController@refresh');
+    Route::post('login', 'AuthAPIController@login');
+    Route::post('register', 'AuthAPIController@register');
+    Route::post('logout', 'AuthAPIController@logout');
+    Route::get('profile', 'AuthAPIController@profile');
+    Route::post('refresh', 'AuthAPIController@refresh');
 });
 
 Route::group([
     'middleware'=>'api',
     'namespace'=>'App\Http\Controllers',
 ], function ($router){
-    Route::resource('todos', 'TodoController');
+    Route::resource('todos', 'TodoAPIController');
 });
 
 Route::group([
     'middleware'=>'api',
     'namespace'=>'App\Http\Controllers',
 ], function ($router){
-    Route::resource('product', 'ProductsController');
+    Route::resource('product', 'ProductsAPIController');
 });
 
 Route::group([
     'middleware'=>'api',
     'namespace'=>'App\Http\Controllers',
 ], function ($router){
-    Route::resource('product/{productId}/comment', 'CommentsController');
+    Route::resource('product/{productId}/comment', 'CommentsAPIController');
 });

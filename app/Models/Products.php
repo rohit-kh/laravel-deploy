@@ -14,7 +14,7 @@ class Products extends Model
         return $this->hasMany(ProductImages::class, "product_id", "id");
     }
 
-    public function productComments()
+    public function comments()
     {
         return $this->hasMany(ProductComments::class, "product_id", "id");
     }

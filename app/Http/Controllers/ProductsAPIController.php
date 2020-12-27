@@ -8,16 +8,19 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Ramsey\Uuid\Type\Integer;
 
-class ProductsController extends Controller
+class ProductsAPIController extends Controller
 {
 
     protected $user;
+    protected $products;
 
     public function __construct()
     {
         $this->middleware("auth:api");
         $this->user = $this->guard()->user();
+        $this->products = Products::with("comments")->get();
     }
 
 
@@ -28,7 +31,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json($this->products->toArray());
     }
 
     /**
@@ -97,9 +100,9 @@ class ProductsController extends Controller
      * @param \App\Models\Products $products
      * @return \Illuminate\Http\Response
      */
-    public function show(Products $products)
+    public function show($id)
     {
-        //
+        return Products::with("comments")->findOrFail($id);
     }
 
     /**
@@ -120,7 +123,7 @@ class ProductsController extends Controller
      * @param \App\Models\Products $products
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, products $products)
+    public function update(Request $request, Products $product)
     {
         //
     }
@@ -131,7 +134,7 @@ class ProductsController extends Controller
      * @param \App\Models\Products $products
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Products $products)
+    public function destroy(Products $product)
     {
         //
     }
