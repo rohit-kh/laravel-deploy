@@ -22,7 +22,7 @@ class AuthAPIController extends Controller
             return response()->json($validator->errors(), 400);
         }
 
-        $tokenValidity = 48*60;
+        $tokenValidity = 24*60;
 
         $this->guard()->factory()->setTTl($tokenValidity);
 
