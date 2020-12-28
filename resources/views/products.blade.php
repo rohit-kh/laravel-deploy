@@ -9,7 +9,7 @@ $v = strtotime(Date("Y-m-d H:i:s"));
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/main.css?v='.$v) }}">
+    <link rel="stylesheet" href="{{ env('APP_URL').'/assets/css/main.css?v='.$v }}">
     <title>Products | OLX</title>
 </head>
 <body>
@@ -50,11 +50,11 @@ $v = strtotime(Date("Y-m-d H:i:s"));
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"
         crossorigin="anonymous"></script>
 <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
-<script src="{{ URL::asset('assets/js/main.js?v='.$v) }}"></script>
-<script src="{{ URL::asset('assets/js/products.js?v='.$v) }}"></script>
+<script src="{{env('APP_URL').'/assets/js/main.js?v='.$v}}"></script>
+<script src="{{env('APP_URL').'/assets/js/products.js?v='.$v}}"></script>
 </body>
 <script>
-    const baseUrl = "{{URL::to('/')}}";
+    const baseUrl = "{{env('APP_URL')}}";
     $(document).ready(function () {
         products.init();
     });

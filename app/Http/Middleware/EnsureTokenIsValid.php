@@ -24,7 +24,7 @@ class EnsureTokenIsValid
     {
         $jwtToken = isset($_COOKIE["JWT-TOKEN"]) ? $_COOKIE["JWT-TOKEN"] : '';
         if (isset($jwtToken) && !empty($jwtToken)) {
-            $response = Http::get(URL::to("/") . "/api/auth/profile", ["token" => $jwtToken]);
+            $response = Http::get(env("APP_URL") . "/api/auth/profile", ["token" => $jwtToken]);
             if ($response->successful()) {
                 $request = $request->merge(["user" => $response->json()]);
                 return $next($request);

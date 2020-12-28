@@ -16,7 +16,7 @@ var signin = function () {
                     setCookie('JWT-TOKEN', data.token, 1);
                     setTimeout(function (){
                         window.location = 'product';
-                    },1000);
+                    },500);
                 },
                 error: function (event, jqxhr, settings) {
                     swal({
