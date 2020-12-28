@@ -58,7 +58,7 @@ class AuthAPIController extends Controller
     }
 
     public function profile(Request $request){
-        return response()->json([$this->guard()->user()]);
+        return response()->json($this->guard()->user());
     }
 
     public function refresh(Request $request){

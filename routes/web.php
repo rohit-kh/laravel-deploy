@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Middleware\EnsureTokenIsValid;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +19,8 @@ use App\Http\Controllers\ProductController;
 Route::get('/', [WelcomeController::class, 'index']);
 Route::get('signin', [WelcomeController::class, 'showSigninForm']);
 Route::get('signup', [WelcomeController::class, 'showSignupForm']);
-Route::get('product', [ProductController::class, 'showProducts']);
-Route::get('product/{productId}', [ProductController::class, 'showProductDetails']);
+
+Route::middleware([EnsureTokenIsValid::class])->group(function () {
+    Route::get('product', [ProductController::class, 'showProducts']);
+    Route::get('product/{productId}', [ProductController::class, 'showProductDetails']);
+});
