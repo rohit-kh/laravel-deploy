@@ -26,7 +26,7 @@ $v = strtotime(Date("Y-m-d H:i:s"));
         <ul class="navbar-nav mr-auto text-right">
             <li class="nav-item">
 
-                <a class="nav-link" href="{{URL::to('/product')}}">Products</a>
+                <a class="nav-link" href="{{env('APP_URL').'/product'}}">Products</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="#">Add product</a>
@@ -34,7 +34,7 @@ $v = strtotime(Date("Y-m-d H:i:s"));
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <span class="nav-link">{{$user["name"]}}</span>
-            <a class="nav-link" href="{{URL::to('/user/logout')}}">Logout</a>
+            <a class="nav-link" href="{{env('APP_URL').'/user/logout'}}">Logout</a>
         </form>
     </div>
 </nav>
