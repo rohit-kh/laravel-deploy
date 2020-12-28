@@ -31,7 +31,7 @@ $v = strtotime(Date("Y-m-d H:i:s"));
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <span class="nav-link">{{isset($user["name"])?$user["name"]:""}}</span>
+            <span class="nav-link">{{$user["name"]}}</span>
             <a class="nav-link" href="{{URL::to('/user/logout')}}">Logout</a>
         </form>
     </div>
