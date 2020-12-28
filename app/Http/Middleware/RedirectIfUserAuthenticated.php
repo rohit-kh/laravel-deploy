@@ -22,7 +22,7 @@ class RedirectIfUserAuthenticated
         if (isset($jwtToken) && !empty($jwtToken)) {
             $response = Http::get(env("APP_URL") . "/api/auth/profile", ["token" => $jwtToken]);
             if ($response->successful()) {
-                return redirect('/product');
+                return redirect('/products');
             } else {
                 return $next($request);
             }
