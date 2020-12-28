@@ -33,7 +33,7 @@ var products = function () {
             console.log(object, index);
             let imageUrl = baseUrl + '/public/product/images/' + object.images[0].name;
             $productList.append(
-                '<a href="product/' + object.id + '">\n' +
+                '<a href="products/' + object.id + '">\n' +
                 '<div class="col-md-3">\n' +
                 '            <div class="card">\n' +
                 '                <img class="card-img-bottom" src="' + imageUrl + '" alt="Card image" style="width:100%">\n' +

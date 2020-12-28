@@ -26,7 +26,7 @@ $v = strtotime(Date("Y-m-d H:i:s"));
         <ul class="navbar-nav mr-auto text-right">
             <li class="nav-item">
 
-                <a class="nav-link" href="{{env('APP_URL').'/product'}}">Products</a>
+                <a class="nav-link" href="{{env('APP_URL').'/products'}}">Products</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="#">Add product</a>

@@ -24,10 +24,10 @@ $v = strtotime(Date("Y-m-d H:i:s"));
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto text-right">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Products</a>
+                <a class="nav-link" href="{{env('APP_URL').'/products'}}">Products</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{env('APP_URL').'/product/create'}}">Add product</a>
+                <a class="nav-link" href="{{env('APP_URL').'/products/create'}}">Add product</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

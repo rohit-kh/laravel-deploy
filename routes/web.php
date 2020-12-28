@@ -27,7 +27,7 @@ Route::middleware([RedirectIfUserAuthenticated::class])->group(function () {
 
 Route::middleware([EnsureTokenIsValid::class])->group(function () {
     Route::get('products', [ProductController::class, 'showProducts']);
-    Route::get('product/create', [ProductController::class, 'showProductFrom']);
+    Route::get('products/create', [ProductController::class, 'showProductFrom']);
     Route::get('products/{productId}', [ProductController::class, 'showProductDetails']);
     Route::get('user/logout', [LogoutController::class, 'logout']);
 });
