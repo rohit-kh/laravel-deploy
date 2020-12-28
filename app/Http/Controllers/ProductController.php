@@ -10,17 +10,21 @@ class ProductController extends Controller
 {
 
     public function showProducts(Request $request){
-        return view("products");
+        return view("products", ["user"=>$request->user]);
     }
 
     public function showProductDetails(Request $request, $productId){
         return view("product-details",
             [
-                "productId"=>$productId
+                "productId"=>$productId,
+                "user"=>$request->user
             ]);
     }
 
     public function showProductFrom(Request $request){
-        return view("product-form");
+        return view("product-form",
+            [
+                "user"=>$request->user
+            ]);
     }
 }
