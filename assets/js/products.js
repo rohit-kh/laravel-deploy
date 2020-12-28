@@ -39,8 +39,6 @@ var products = function () {
                 '                <img class="card-img-bottom" src="' + imageUrl + '" alt="Card image" style="width:100%">\n' +
                 '                <div class="card-body">\n' +
                 '                    <h4 class="card-title">' + object.name + '</h4>\n' +
-                '                    <p class="card-text">' + object.description + '</p>\n' +
-                '                    <a href="#" class="btn btn-primary">See Profile</a>\n' +
                 '                </div>\n' +
                 '            </div>\n' +
                 '        </div>' +
