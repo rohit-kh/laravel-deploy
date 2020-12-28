@@ -75,7 +75,7 @@ $v = strtotime(Date("Y-m-d H:i:s"));
                         </div>
                         <div class="col-md-12 text-center">
                             <button type="submit" class="btn btn-primary">
-                                Create account
+                                Add product
                             </button>
                             <button type="button" class="btn btn-danger btn-reset">
                                 Reset
