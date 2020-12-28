@@ -10,7 +10,7 @@ class ProductController extends Controller
 {
 
     public function showProducts(Request $request){
-        return view("products", ["user"=>$request->user]);
+        return view("products");
     }
 
     public function showProductDetails(Request $request, $productId){
