@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="41aec94c-96d2-4098-9dfc-bc5becd09e7a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthAPIController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthAPIController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsAPIController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsAPIController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/EnsureTokenIsValid.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/EnsureTokenIsValid.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product-details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/signin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/signin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/signup.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/signup.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,16 +149,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/js" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/assets/js" />
+      <recent name="$PROJECT_DIR$/assets/css" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers" />
+      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -177,7 +183,7 @@
       <workItem from="1608809733314" duration="8660000" />
       <workItem from="1608961412751" duration="29643000" />
       <workItem from="1609070659730" duration="18177000" />
-      <workItem from="1609129983867" duration="2242000" />
+      <workItem from="1609129983867" duration="9633000" />
     </task>
     <servers />
   </component>
@@ -210,7 +216,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/products.blade.php</url>
-          <line>55</line>
+          <line>40</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

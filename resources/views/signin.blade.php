@@ -9,7 +9,7 @@ $v = strtotime(Date("Y-m-d H:i:s"));
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/main.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/main.css?v='.$v) }}">
     <title>Sign in | OLX</title>
 </head>
 <body>
@@ -45,18 +45,17 @@ $v = strtotime(Date("Y-m-d H:i:s"));
                 <form class="signin-form" id="signin-form" name="signin-form" method="post">
                     @csrf
                     <div class="form-group">
-                        <label for="email">Email address</label>
+                        <label for="email">Email address <span class="required-label">*</span></label>
                         <input type="email" class="form-control" name="email" id="email" required aria-describedby="emailHelp">
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                             else.</small>
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
+                        <label for="password">Password <span class="required-label">*</span></label>
                         <input type="password" class="form-control" name="password" required minlength="6" id="password">
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">
                         Sign in
-                        <span class="spinner-border spinner-border-sm"></span>
                     </button>
                 </form>
             </div>

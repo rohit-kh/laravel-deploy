@@ -27,11 +27,12 @@ $v = strtotime(Date("Y-m-d H:i:s"));
                 <a class="nav-link" href="#">Products</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="product/create">Add product</a>
+                <a class="nav-link" href="{{URL::to('/product/create')}}">Add product</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <a class="nav-link" href="#">Logout</a>
+            <span class="nav-link">{{$user["name"]}}</span>
+            <a class="nav-link" href="{{URL::to('/user/logout')}}">Logout</a>
         </form>
     </div>
 </nav>
@@ -41,15 +42,6 @@ $v = strtotime(Date("Y-m-d H:i:s"));
         <div class="col-md-8">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="..." alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="..." alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="..." alt="Third slide">
-                    </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -94,7 +86,6 @@ $v = strtotime(Date("Y-m-d H:i:s"));
                         </div>
                         <button type="submit" class="btn btn-primary">
                             Post Comment
-{{--                            <span class="spinner-border spinner-border-sm"></span>--}}
                         </button>
                         <button type="button" class="btn btn-danger btn-reset">
                             Reset

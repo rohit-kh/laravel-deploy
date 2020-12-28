@@ -57,6 +57,7 @@ class ProductsAPIController extends Controller
             [
                 "name" => "required|string|unique:products",
                 "description" => "required|string",
+                'price' => 'required|integer|min:1',
                 'image' => 'required',
                 'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
             ]);
@@ -68,6 +69,7 @@ class ProductsAPIController extends Controller
 
         $product = new Products();
         $product->name = $request->name;
+        $product->price = $request->price;
         $product->description = $request->description;
         if ($this->user->products()->save($product) &&
             $this->uploadProductImages($request, $product)

@@ -27,59 +27,17 @@ $v = strtotime(Date("Y-m-d H:i:s"));
                 <a class="nav-link" href="#">Products</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="product/create">Add product</a>
+                <a class="nav-link" href="{{URL::to('/product/create')}}">Add product</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <a class="nav-link" href="#">Logout</a>
+            <span class="nav-link">{{$user["name"]}}</span>
+            <a class="nav-link" href="{{URL::to('/user/logout')}}">Logout</a>
         </form>
     </div>
 </nav>
 <div class="container mt-3">
-    {{--        <div class="col-md-12 text-center">--}}
-    {{--            <span class="spinner-border"></span> &nbsp;--}}
-    {{--        </div>--}}
     <div class="row product-list">
-        <div class="col-md-3">
-            <div class="card">
-                <img class="card-img-bottom" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title">Jane Doe</h4>
-                    <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
-                    <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card">
-                <img class="card-img-bottom" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title">Jane Doe</h4>
-                    <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
-                    <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card">
-                <img class="card-img-bottom" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title">Jane Doe</h4>
-                    <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
-                    <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card">
-                <img class="card-img-bottom" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title">Jane Doe</h4>
-                    <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
-                    <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

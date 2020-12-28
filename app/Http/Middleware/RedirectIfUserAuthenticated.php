@@ -4,20 +4,16 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Route;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\URL;
-use Tymon\JWTAuth\Facades\JWTAuth;
 
-class EnsureTokenIsValid
+class RedirectIfUserAuthenticated
 {
-
     /**
      * Handle an incoming request.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param \Closure $next
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
      * @return mixed
      */
     public function handle(Request $request, Closure $next)
@@ -26,13 +22,12 @@ class EnsureTokenIsValid
         if (isset($jwtToken) && !empty($jwtToken)) {
             $response = Http::get(URL::to("/") . "/api/auth/profile", ["token" => $jwtToken]);
             if ($response->successful()) {
-                $request = $request->merge(["user" => $response->json()]);
-                return $next($request);
+                return redirect('/product');
             } else {
-                return redirect('/signin');
+                return $next($request);
             }
         } else {
-            return redirect('/signin');
+            return $next($request);
         }
     }
 }

@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\LogoutController;
 use App\Http\Middleware\EnsureTokenIsValid;
+use App\Http\Middleware\RedirectIfUserAuthenticated;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +18,16 @@ use App\Http\Middleware\EnsureTokenIsValid;
 |
 */
 
-Route::get('/', [WelcomeController::class, 'index']);
-Route::get('signin', [WelcomeController::class, 'showSigninForm']);
-Route::get('signup', [WelcomeController::class, 'showSignupForm']);
+
+Route::middleware([RedirectIfUserAuthenticated::class])->group(function () {
+    Route::get('/', [WelcomeController::class, 'index']);
+    Route::get('signin', [WelcomeController::class, 'showSigninForm']);
+    Route::get('signup', [WelcomeController::class, 'showSignupForm']);
+});
 
 Route::middleware([EnsureTokenIsValid::class])->group(function () {
     Route::get('product', [ProductController::class, 'showProducts']);
+    Route::get('product/create', [ProductController::class, 'showProductFrom']);
     Route::get('product/{productId}', [ProductController::class, 'showProductDetails']);
+    Route::get('user/logout', [LogoutController::class, 'logout']);
 });

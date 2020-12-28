@@ -20,4 +20,11 @@ class ProductController extends Controller
                 "user"=>$request->user
             ]);
     }
+
+    public function showProductFrom(Request $request){
+        return view("product-form",
+            [
+                "user"=>$request->user
+            ]);
+    }
 }
